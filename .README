@@ -1,0 +1,28 @@
+SETUP:
+1. Clone this repository
+2. Install the dependencies
+3. Create a .env file on the root folder:
+PORT=
+DATABASE_URI= (I used mongoDB)
+3.1. Creating ACCESS TOKEN AND REFRESH TOKEN
+>node
+>require('crypto').randomBytes(64).toString('hex')
+(generate 2 for access token and refresh token)
+ACCESS_TOKEN_SECRET= 
+REFRESH_TOKEN_SECRET=
+
+4. Update the allowedOrigins.js file to add your domains/ip
+
+5. Run the project: npm run dev
+
+Application Security - 
+I installed the following:
+1. cors - Enables secure cross-origin requests between frontend and backend 
+
+2. express-validator - To validate and sanitize user input in API, protecting against common security vulnerabilities like SQL injection and Cross-Site Scripting (XSS).
+
+3. jasonwebtoken - Used to create, verify, and decode JSON Web Tokens (JWTs) for secure user authentication and authorization.
+
+4. dotenv - Loads environment variables (e.g., API keys, database passwords) from a .env file, keeping sensitive data safe
+
+5. bcrypt - to securely hash the password. 
